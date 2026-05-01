@@ -2,7 +2,15 @@
 
 Keybinderr is a Windows tray app. The easiest install path is the signed-by-Windows-user-mode installer artifact produced by GitHub Actions.
 
-## Option 1 — Download the installer artifact
+## Option 1 — Download the release installer
+
+1. Open the latest GitHub release: <https://github.com/nfredmond/keybinderr/releases/latest>
+2. Download `KeybinderrSetup.exe`.
+3. Run the installer.
+
+The installer places Keybinderr under your user profile and does not require administrator rights.
+
+## Option 2 — Download the latest Actions artifact
 
 1. Open the repository's **Actions** tab on GitHub.
 2. Select **Build Windows Installer**.
@@ -10,9 +18,7 @@ Keybinderr is a Windows tray app. The easiest install path is the signed-by-Wind
 4. Download the `KeybinderrSetup` artifact.
 5. Unzip it and run `KeybinderrSetup.exe`.
 
-The installer places Keybinderr under your user profile and does not require administrator rights.
-
-## Option 2 — Build locally from source
+## Option 3 — Build locally from source
 
 Requirements:
 
