@@ -17,6 +17,10 @@ Keybinderr is a Windows 11 tray utility for per-game keyboard remapping. It is d
 - .NET 10 SDK for development and publishing.
 - Inno Setup 6 for building the installer.
 
+## Easy Install
+
+See [INSTALL.md](INSTALL.md) for the easiest Windows install path. GitHub Actions builds a `KeybinderrSetup.exe` installer artifact on every push to `main`, and the app installs under the current user without requiring administrator rights.
+
 ## Commands
 
 ```powershell

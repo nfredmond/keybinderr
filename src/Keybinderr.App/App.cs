@@ -1,10 +1,11 @@
+using System.IO;
 using System.Windows;
 using Keybinderr.App.Services;
 using Keybinderr.Core.Services;
 
 namespace Keybinderr.App;
 
-public sealed class App : Application
+public sealed class App : System.Windows.Application
 {
     private readonly string[] _args;
     private Mutex? _singleInstanceMutex;

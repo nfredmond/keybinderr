@@ -62,11 +62,11 @@ public sealed class TrayIconService : IDisposable
         _menu.Items.Clear();
 
         var activeProfile = _activeProfileService.ActiveProfile;
-        _menu.Items.Add(new WinForms.ToolStripMenuItem($"Active: {activeProfile.Name}") { Enabled = false });
-        _menu.Items.Add(new WinForms.ToolStripMenuItem($"Config: {_profileRuntime.ConfigPath}") { Enabled = false });
+        _menu.Items.Add(new WinForms.ToolStripMenuItem($"Active profile: {activeProfile.Name}") { Enabled = false });
+        _menu.Items.Add(new WinForms.ToolStripMenuItem($"Settings file: {_profileRuntime.ConfigPath}") { Enabled = false });
         _menu.Items.Add(new WinForms.ToolStripSeparator());
 
-        var pausedItem = new WinForms.ToolStripMenuItem("Pause remapping")
+        var pausedItem = new WinForms.ToolStripMenuItem("Pause all remapping")
         {
             Checked = _profileRuntime.Document.Settings.RemappingPaused
         };
@@ -91,11 +91,11 @@ public sealed class TrayIconService : IDisposable
 
         _menu.Items.Add(new WinForms.ToolStripSeparator());
 
-        var openSettingsItem = new WinForms.ToolStripMenuItem("Open Settings");
+        var openSettingsItem = new WinForms.ToolStripMenuItem("Open settings…");
         openSettingsItem.Click += (_, _) => _showSettings();
         _menu.Items.Add(openSettingsItem);
 
-        var exitItem = new WinForms.ToolStripMenuItem("Exit");
+        var exitItem = new WinForms.ToolStripMenuItem("Exit Keybinderr");
         exitItem.Click += (_, _) =>
         {
             _keyboardHookService.Stop();
